@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.86e530a4ddd6544c1885434a3b441f9a.js"
+  "https://leftjs.github.io/vue-lottery/precache-manifest.f189c275e3d6ee97710235f0b2b38be5.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lottery"});
