@@ -288,7 +288,7 @@ body,
   margin-top: 20px;
 }
 #current {
-  width: 300px;
+  width: 400px;
   height: 200px;
   border-radius: 20px;
   text-align: center;

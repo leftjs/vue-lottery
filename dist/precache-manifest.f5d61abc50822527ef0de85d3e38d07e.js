@@ -4,11 +4,11 @@ self.__precacheManifest = [
     "url": "/vue-lottery/js/chunk-vendors.7c946a84.js"
   },
   {
-    "revision": "1fa011969904e95b028b",
-    "url": "/vue-lottery/js/app.1fa01196.js"
+    "revision": "01c85c071ce3d203a119",
+    "url": "/vue-lottery/js/app.01c85c07.js"
   },
   {
-    "revision": "ad0c679efd371567804b7e55e80b1b11",
+    "revision": "fab592ff6c1827f0e4633fce42244581",
     "url": "/vue-lottery/index.html"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/vue-lottery/css/chunk-vendors.0d80c453.css"
   },
   {
-    "revision": "1fa011969904e95b028b",
-    "url": "/vue-lottery/css/app.0604e777.css"
+    "revision": "01c85c071ce3d203a119",
+    "url": "/vue-lottery/css/app.e28deefd.css"
   }
 ];
