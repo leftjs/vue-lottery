@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <img :src="logo" id="logo" alt="">
-    <p style="font-size: 2rem; margin: 1rem;">
+    <p style="font-size: 5rem; margin: 1rem;">
       {{currentTitle}}
     </p>
     <el-input id="current" v-model="current"></el-input>
     <div id="btn_group">
-      <el-button plain round type="danger" id="start" @click="trigger" :disabled="currentTitle == '抽奖完毕'">{{ current_interval ? "暂停" : "开始"}}</el-button>
-      <el-button plain round type="info" @click="reset">重置</el-button>
-      <el-button plain round type="warning" @click="openConfig=!openConfig" :disabled="startLottery == true">设置</el-button>
-      <el-button plain round type="success" @click="openAward=!openAward">获奖</el-button>
+      <el-button class="btn" plain round type="danger" id="start" @click="trigger" :disabled="currentTitle == '抽奖完毕'">{{ current_interval ? "暂停" : "开始"}}</el-button>
+      <el-button class="btn" plain round type="info" @click="reset">重置</el-button>
+      <el-button class="btn" plain round type="warning" @click="openConfig=!openConfig" :disabled="startLottery == true">设置</el-button>
+      <el-button class="btn" plain round type="success" @click="openAward=!openAward">获奖</el-button>
     </div>
     <el-dialog title="抽奖设置" :visible.sync="openConfig" :before-close="beforeConfigClose">
       <el-form label-width="100px" style="width: 50%; margin: 0 auto;" :model="config" ref="configForm" label-position="right">
@@ -35,8 +35,8 @@
 
     <el-dialog title="获奖名单" :visible.sync="openAward">
       <div v-for="reward in config.rewards" :key="reward.key" style="border-bottom: 1px dashed lightgrey">
-        <p style="font-size: 1.5rem;">{{reward.title}} ({{reward.count-reward.left}} / {{reward.count}})</p>
-        <p style="font-size: 1rem;">{{JSON.stringify(reward.awards)}}</p>
+        <p style="font-size: 2.4rem;">{{reward.title}} ({{reward.count-reward.left}} / {{reward.count}})</p>
+        <p style="font-size: 1.2rem;">{{JSON.stringify(reward.awards)}}</p>
       </div>
     </el-dialog>
   </div>
@@ -279,7 +279,7 @@ body,
 }
 
 #logo {
-  width: 40%;
+  width: 500px;
   position: absolute;
   left: 20px;
   top: 20px;
@@ -288,11 +288,11 @@ body,
   margin-top: 20px;
 }
 #current {
-  width: 200px;
-  height: 100px;
-  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
   text-align: center;
-  font-size: 4rem;
+  font-size: 10rem;
   background: transparent;
   border: 1px solid #b20af0;
 }
@@ -300,6 +300,12 @@ body,
   width: 100px;
   height: 200px;
   background: transparent;
+}
+
+.btn {
+  width: 150px;
+  height: 80px;
+  font-size: 2rem;
 }
 </style>
 

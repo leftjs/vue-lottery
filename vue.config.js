@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: "https://leftjs.github.io/vue-lottery"
+  baseUrl: process.env.NODE_ENV === "production" ? "/vue-lottery/" : "/"
 };
