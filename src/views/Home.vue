@@ -36,7 +36,7 @@
     <el-dialog title="获奖名单" :visible.sync="openAward">
       <div v-for="reward in config.rewards" :key="reward.key" style="border-bottom: 1px dashed lightgrey">
         <p style="font-size: 2.4rem;">{{reward.title}} ({{reward.count-reward.left}} / {{reward.count}})</p>
-        <p style="font-size: 1.2rem;">{{JSON.stringify(reward.awards)}}</p>
+        <div style="font-size: 1.2rem; width:100%; word-wrap:break-word; ">{{JSON.stringify(reward.awards)}}</div>
       </div>
     </el-dialog>
   </div>
@@ -171,25 +171,30 @@ export default {
           {
             key: 0,
             name: "奖项0",
-            value: "三等奖/10"
+            value: "幸运奖/20"
           },
           {
             key: 1,
             name: "奖项1",
-            value: "二等奖/5"
+            value: "三等奖/10"
           },
           {
             key: 2,
             name: "奖项2",
-            value: "一等奖/3"
+            value: "二等奖/5"
           },
           {
             key: 3,
             name: "奖项3",
+            value: "一等奖/3"
+          },
+          {
+            key: 4,
+            name: "奖项4",
             value: "特等奖/1"
           }
         ],
-        number: 100
+        number: 600
       };
       this.config = defaultConfig;
     },
